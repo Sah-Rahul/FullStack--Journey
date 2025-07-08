@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 4 - ES6 + Array Methods</title>
+</head>
+<body>
+
+    <h1>JavaScript Day 4 - ES6 Features & Array Methods</h1>
+
+    <script>
+        // let and const
+        let name = "Rahul";
+        const country = "Nepal";
+        console.log(name, country);
+
+        // Template Literals
+        let age = 25;
+        console.log(`My name is ${name} and I am ${age} years old.`);
+
+        // Spread Operator
+        let arr1 = [1, 2, 3];
+        let arr2 = [4, 5, 6];
+        let combined = [...arr1, ...arr2];
+        console.log("Combined Array:", combined);
+
+        // Rest Operator
+        function sumAll(...nums) {
+            return nums.reduce((total, num) => total + num, 0);
+        }
+        console.log("Sum All:", sumAll(1, 2, 3, 4, 5));
+
+        // Destructuring
+        let person = { firstName: "Rahul", lastName: "Sah", age: 25 };
+        let { firstName, age: myAge } = person;
+        console.log(`Name: ${firstName}, Age: ${myAge}`);
+
+        let colors = ["Red", "Green", "Blue"];
+        let [primary, secondary] = colors;
+        console.log("Primary:", primary, "Secondary:", secondary);
+
+        // Default Parameters
+        function greet(name = "Developer") {
+            console.log(`Hello, ${name}!`);
+        }
+        greet(); // Hello, Developer!
+        greet("Rahul"); // Hello, Rahul!
+
+        // Optional Chaining
+        let user = { profile: { username: "rahul_sah" } };
+        console.log(user?.profile?.username); // rahul_sah
+        console.log(user?.address?.city); // undefined, but safe
+
+        // Array Methods
+        let numbers = [1, 2, 3, 4, 5];
+
+        // map - square each number
+        let squares = numbers.map(num => num * num);
+        console.log("Squares:", squares);
+
+        // filter - get even numbers
+        let evens = numbers.filter(num => num % 2 === 0);
+        console.log("Even Numbers:", evens);
+
+        // reduce - sum of all numbers
+        let total = numbers.reduce((sum, num) => sum + num, 0);
+        console.log("Total Sum:", total);
+
+        // Real Example
+        let products = [
+            { name: "Laptop", price: 50000 },
+            { name: "Mobile", price: 20000 },
+            { name: "Tablet", price: 15000 }
+        ];
+
+        // Increase all prices by 10%
+        let updatedProducts = products.map(product => {
+            return { ...product, price: product.price * 1.1 };
+        });
+        console.log("Updated Products:", updatedProducts);
+
+        // Filter products above 20000
+        let expensive = products.filter(product => product.price > 20000);
+        console.log("Expensive Products:", expensive);
+
+        // Total price
+        let totalPrice = products.reduce((sum, item) => sum + item.price, 0);
+        console.log("Total Price:", totalPrice);
+
+    </script>
+
+</body>
+</html>
