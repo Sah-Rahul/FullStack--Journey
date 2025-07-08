@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 - Final HTML Practice</title>
+</head>
+<body>
+
+    <header>
+        <h1>My Final HTML Practice</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Form</a></li>
+                <li><a href="#">Table</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Form Section -->
+        <section>
+            <h2>Contact Form</h2>
+            <form>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="30"></textarea>
+                <br><br>
+
+                <label for="service">Select Service:</label>
+                <select id="service" name="service">
+                    <option value="web">Web Design</option>
+                    <option value="app">App Development</option>
+                    <option value="seo">SEO</option>
+                </select>
+                <br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Table Section -->
+        <section>
+            <h2>My Learning Schedule</h2>
+            <table border="1" cellpadding="10">
+                <tr>
+                    <th>Day</th>
+                    <th>Topic</th>
+                </tr>
+                <tr>
+                    <td>Day 1</td>
+                    <td>HTML Basics</td>
+                </tr>
+                <tr>
+                    <td>Day 2</td>
+                    <td>HTML Structure</td>
+                </tr>
+                <tr>
+                    <td>Day 3</td>
+                    <td>Lists & Images</td>
+                </tr>
+                <tr>
+                    <td>Day 4</td>
+                    <td>Accessibility</td>
+                </tr>
+                <tr>
+                    <td>Day 5</td>
+                    <td>Forms & Tables</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- HTML Entities -->
+        <section>
+            <h2>HTML Entities Example</h2>
+            <p>Copyright: &copy; 2025</p>
+            <p>Less Than: &lt; , Greater Than: &gt;</p>
+            <p>Heart Symbol: &hearts;</p>
+        </section>
+
+        <!-- iFrame Example -->
+        <section>
+            <h2>Embedded YouTube Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Final HTML Page. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
