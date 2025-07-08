@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h1>Calculator</h1>
+    <input type="number" id="num1" placeholder="Number 1">
+    <input type="number" id="num2" placeholder="Number 2">
+    <select id="operation">
+        <option value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+    </select>
+    <button id="calculate">Calculate</button>
+    <h2 id="result">Result: </h2>
+
+    <script>
+        const num1 = document.getElementById('num1');
+        const num2 = document.getElementById('num2');
+        const operation = document.getElementById('operation');
+        const calculateBtn = document.getElementById('calculate');
+        const resultDisplay = document.getElementById('result');
+
+        calculateBtn.addEventListener('click', () => {
+            const a = parseFloat(num1.value);
+            const b = parseFloat(num2.value);
+            let result;
+
+            if (operation.value === 'add') result = a + b;
+            else if (operation.value === 'subtract') result = a - b;
+            else if (operation.value === 'multiply') result = a * b;
+            else if (operation.value === 'divide') result = a / b;
+
+            resultDisplay.innerText = 'Result: ' + result;
+        });
+    </script>
+
+</body>
+</html>
