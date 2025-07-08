@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 6 - Promises, Fetch API, Project</title>
+</head>
+<body>
+
+    <h1>JavaScript Day 6 - Promises, async/await, Fetch API</h1>
+    <div id="data"></div>
+
+    <script>
+        // Promise Example
+        let myPromise = new Promise((resolve, reject) => {
+            let success = true;
+            if (success) {
+                resolve("Promise Resolved Successfully!");
+            } else {
+                reject("Promise Rejected!");
+            }
+        });
+
+        myPromise
+            .then(result => console.log(result))
+            .catch(error => console.log(error));
+
+        // Promise Chaining
+        function doubleNumber(num) {
+            return new Promise((resolve) => {
+                setTimeout(() => resolve(num * 2), 1000);
+            });
+        }
+
+        doubleNumber(5)
+            .then(result => {
+                console.log("First Result:", result);
+                return doubleNumber(result);
+            })
+            .then(result => {
+                console.log("Second Result:", result);
+                return doubleNumber(result);
+            })
+            .then(result => console.log("Third Result:", result))
+            .catch(error => console.log(error));
+
+        // async/await Example
+        async function getData() {
+            try {
+                let response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+                let data = await response.json();
+                console.log("Fetched Data:", data);
+                document.getElementById('data').innerHTML = `
+                    <h3>${data.title}</h3>
+                    <p>${data.body}</p>
+                `;
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        }
+
+        getData();
+
+    </script>
+
+</body>
+</html>
