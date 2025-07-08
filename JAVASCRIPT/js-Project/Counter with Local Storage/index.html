@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Project</title>
+</head>
+<body>
+
+    <h1>Counter: <span id="counter">0</span></h1>
+    <button id="increment">+</button>
+    <button id="decrement">-</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        let count = localStorage.getItem('count') ? parseInt(localStorage.getItem('count')) : 0;
+        const counterDisplay = document.getElementById('counter');
+        const incrementBtn = document.getElementById('increment');
+        const decrementBtn = document.getElementById('decrement');
+        const resetBtn = document.getElementById('reset');
+
+        counterDisplay.innerText = count;
+
+        incrementBtn.addEventListener('click', () => {
+            count++;
+            updateCounter();
+        });
+
+        decrementBtn.addEventListener('click', () => {
+            count--;
+            updateCounter();
+        });
+
+        resetBtn.addEventListener('click', () => {
+            count = 0;
+            updateCounter();
+        });
+
+        function updateCounter() {
+            counterDisplay.innerText = count;
+            localStorage.setItem('count', count);
+        }
+    </script>
+
+</body>
+</html>
