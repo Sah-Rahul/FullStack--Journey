@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 3 - Objects & Functions</title>
+</head>
+<body>
+
+    <h1>JavaScript Day 3 - Objects & Functions Deep Dive</h1>
+
+    <script>
+        // Object Creation
+        let person = {
+            name: "Rahul",
+            age: 25,
+            isDeveloper: true,
+            skills: ["HTML", "CSS", "JavaScript"],
+            address: {
+                city: "Kathmandu",
+                country: "Nepal"
+            }
+        };
+
+        console.log("Person Object:", person);
+
+        // Access Properties
+        console.log("Name:", person.name);
+        console.log("City:", person.address.city);
+
+        // Update Property
+        person.age = 26;
+        console.log("Updated Age:", person.age);
+
+        // Add New Property
+        person.language = "Nepali";
+        console.log("New Property:", person.language);
+
+        // Delete Property
+        delete person.isDeveloper;
+        console.log("After Delete:", person);
+
+        // Loop through Object
+        for (let key in person) {
+            console.log(key + ":", person[key]);
+        }
+
+        // Function Declaration
+        function greet(name) {
+            return "Hello, " + name;
+        }
+        console.log(greet("Gulabi Developer"));
+
+        // Function Expression
+        const add = function (a, b) {
+            return a + b;
+        };
+        console.log("Addition:", add(10, 5));
+
+        // Arrow Function
+        const multiply = (a, b) => a * b;
+        console.log("Multiplication:", multiply(5, 3));
+
+        // Scope Example
+        let x = 10; // Global Scope
+
+        function exampleScope() {
+            let y = 20; // Function Scope
+            if (true) {
+                let z = 30; // Block Scope
+                console.log("Inside Block:", x, y, z);
+            }
+            console.log("Inside Function:", x, y);
+        }
+        exampleScope();
+
+        // Hoisting Example
+        console.log(a); // undefined (var hoisting)
+        var a = 5;
+
+        // console.log(b); // ReferenceError (let is not hoisted)
+        let b = 10;
+
+    </script>
+
+</body>
+</html>
