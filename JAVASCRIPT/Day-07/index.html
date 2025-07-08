@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 7 - DOM, Events, Storage, Validation</title>
+</head>
+<body>
+
+    <h1 id="title">DOM Manipulation Example</h1>
+
+    <button id="changeColor">Change Color</button>
+
+    <h2>Counter: <span id="counter">0</span></h2>
+    <button id="increment">Increment</button>
+
+    <h2>Form Example</h2>
+    <form id="myForm">
+        <input type="text" id="username" placeholder="Enter username">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="error" style="color: red;"></p>
+
+    <script>
+        // DOM Manipulation Example
+        const title = document.getElementById('title');
+        const changeColorBtn = document.getElementById('changeColor');
+
+        changeColorBtn.addEventListener('click', () => {
+            title.style.color = 'crimson';
+        });
+
+        // DOM Events (Counter Example)
+        let count = 0;
+        const counter = document.getElementById('counter');
+        const incrementBtn = document.getElementById('increment');
+
+        incrementBtn.addEventListener('click', () => {
+            count++;
+            counter.innerText = count;
+
+            // Save to Local Storage
+            localStorage.setItem('counterValue', count);
+        });
+
+        // Load counter value from Local Storage
+        window.addEventListener('load', () => {
+            const savedCount = localStorage.getItem('counterValue');
+            if (savedCount) {
+                count = parseInt(savedCount);
+                counter.innerText = count;
+            }
+        });
+
+        // Form Validation
+        const myForm = document.getElementById('myForm');
+        const username = document.getElementById('username');
+        const error = document.getElementById('error');
+
+        myForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (username.value.trim() === '') {
+                error.innerText = 'Username cannot be empty!';
+            } else {
+                error.innerText = '';
+                alert(`Hello, ${username.value}!`);
+                username.value = '';
+            }
+        });
+    </script>
+
+</body>
+</html>
