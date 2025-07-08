@@ -1,0 +1,154 @@
+/* 1️⃣ Basic Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* 2️⃣ Selectors */
+h1, h2, h3 {}             /* Element Selector */
+#idName {}                /* ID Selector */
+.className {}             /* Class Selector */
+div > p {}                /* Child Selector */
+ul li {}                  /* Descendant Selector */
+a:hover {}                /* Pseudo-class */
+p::first-letter {}        /* Pseudo-element */
+[data-type="info"] {}     /* Attribute Selector */
+
+/* 3️⃣ Colors & Units */
+body {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8); /* RGB / HEX / HSL / RGBA */
+  font-size: 16px;           /* px, %, rem, em, vh, vw */
+}
+
+/* 4️⃣ Typography */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  text-shadow: 1px 1px 2px gray;
+}
+
+/* 5️⃣ Box Model */
+.box {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  width: 200px;
+  height: 100px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* 6️⃣ Display & Position */
+.inline { display: inline; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.flex { display: flex; }
+.grid { display: grid; }
+
+.position-absolute {
+  position: absolute;
+  top: 10px; left: 10px;
+}
+
+.position-fixed {
+  position: fixed;
+  bottom: 0; right: 0;
+}
+
+.position-relative {
+  position: relative;
+}
+
+/* 7️⃣ Flexbox */
+.flex-container {
+  display: flex;
+  flex-direction: row;       /* row | column */
+  justify-content: center;   /* space-between, space-around */
+  align-items: center;       /* flex-start, flex-end */
+  gap: 1rem;
+}
+
+/* 8️⃣ Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* 9️⃣ Transitions & Animations */
+.button {
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100px); }
+}
+
+.animate-box {
+  animation: slide 1s infinite alternate;
+}
+
+/* 🔟 Media Queries (Responsive Design) */
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* 1️⃣1️⃣ Pseudo-classes & elements */
+a:hover {
+  color: red;
+}
+p::first-line {
+  font-weight: bold;
+}
+
+/* 1️⃣2️⃣ Z-index & Overflow */
+.overlay {
+  position: absolute;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* 1️⃣3️⃣ Object-fit, Background, Cursor */
+img {
+  width: 100%;
+  object-fit: cover;
+}
+body {
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+button {
+  cursor: pointer;
+}
+
+/* 1️⃣4️⃣ Variables (CSS Custom Properties) */
+:root {
+  --primary: #4CAF50;
+  --padding: 10px;
+}
+.btn {
+  background-color: var(--primary);
+  padding: var(--padding);
+}
