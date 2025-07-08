@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 2 - Arrays & Loops</title>
+</head>
+<body>
+
+    <h1>JavaScript Day 2 - Arrays and Loops</h1>
+
+    <script>
+        // Array Declaration
+        let fruits = ["Apple", "Banana", "Mango", "Orange"];
+        console.log("Fruits Array:", fruits);
+
+        // Access Elements
+        console.log("First Fruit:", fruits[0]);
+        console.log("Last Fruit:", fruits[fruits.length - 1]);
+
+        // Array Methods
+        fruits.push("Grapes");
+        console.log("After Push:", fruits);
+
+        fruits.pop();
+        console.log("After Pop:", fruits);
+
+        fruits.unshift("Strawberry");
+        console.log("After Unshift:", fruits);
+
+        fruits.shift();
+        console.log("After Shift:", fruits);
+
+        console.log("Includes Mango?", fruits.includes("Mango"));
+        console.log("Index of Banana:", fruits.indexOf("Banana"));
+
+        // Looping through Array
+        console.log("Using for loop:");
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+
+        console.log("Using forEach:");
+        fruits.forEach(function (item) {
+            console.log(item);
+        });
+
+        // map example
+        let upperCaseFruits = fruits.map(function (fruit) {
+            return fruit.toUpperCase();
+        });
+        console.log("Uppercase Fruits:", upperCaseFruits);
+
+        // filter example
+        let shortFruits = fruits.filter(function (fruit) {
+            return fruit.length <= 5;
+        });
+        console.log("Short Fruits:", shortFruits);
+
+        // Basic Problem: Sum of Array
+        let numbers = [10, 20, 30, 40, 50];
+        let sum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        console.log("Sum of Array:", sum);
+
+    </script>
+
+</body>
+</html>
