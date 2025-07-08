@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 1</title>
+</head>
+<body>
+
+    <h1>JavaScript Day 1 - Basic Practice</h1>
+
+    <!-- Inline JavaScript Example -->
+    <button onclick="alert('Hello! This is inline JS.')">Click Me (Inline JS)</button>
+
+    <!-- Internal JavaScript -->
+    <script>
+        // Variables
+        var myName = "Rahul";
+        let age = 25;
+        const country = "Nepal";
+
+        // Data Types
+        let isDeveloper = true;
+        let salary = null;
+        let language;
+
+        // Operators
+        let num1 = 10;
+        let num2 = 5;
+        let sum = num1 + num2;
+
+        // Output
+        console.log("My Name:", myName);
+        console.log("Age:", age);
+        console.log("Country:", country);
+        console.log("Sum is:", sum);
+
+        // Function
+        function greet(name) {
+            return "Welcome, " + name + "!";
+        }
+
+        console.log(greet("Rahul"));
+
+        // Function to Add Two Numbers
+        function addNumbers(a, b) {
+            return a + b;
+        }
+
+        console.log("Addition Result:", addNumbers(5, 15));
+
+        // Simple Conditional Example
+        let number = -3;
+
+        if (number > 0) {
+            console.log("The number is positive.");
+        } else if (number < 0) {
+            console.log("The number is negative.");
+        } else {
+            console.log("The number is zero.");
+        }
+
+        // Simple Loop Example
+        for (let i = 1; i <= 5; i++) {
+            console.log("Counting:", i);
+        }
+    </script>
+
+</body>
+</html>
