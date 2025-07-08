@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 5 - Callbacks, HOF, Closures, Event Loop</title>
+</head>
+<body>
+
+    <h1>JavaScript Day 5 - Callback, HOF, Closures, Event Loop</h1>
+
+    <script>
+        // Callback Function Example
+        function greet(name, callback) {
+            console.log("Hi " + name);
+            callback();
+        }
+
+        function sayBye() {
+            console.log("Goodbye!");
+        }
+
+        greet("Rahul", sayBye);
+
+        // Higher Order Function Example
+        function calculator(a, b, operation) {
+            return operation(a, b);
+        }
+
+        function add(x, y) {
+            return x + y;
+        }
+
+        function multiply(x, y) {
+            return x * y;
+        }
+
+        console.log("Addition:", calculator(5, 3, add));
+        console.log("Multiplication:", calculator(5, 3, multiply));
+
+        // Closure Example
+        function outer() {
+            let outerVar = "I am outside!";
+            function inner() {
+                console.log(outerVar);
+            }
+            return inner;
+        }
+
+        const myClosure = outer();
+        myClosure(); // Can access outerVar even after outer() is done
+
+        // setTimeout and setInterval
+        console.log("Start");
+
+        setTimeout(() => {
+            console.log("Executed after 2 seconds");
+        }, 2000);
+
+        let count = 1;
+        const intervalId = setInterval(() => {
+            console.log("Interval Count:", count);
+            count++;
+            if (count > 3) {
+                clearInterval(intervalId);
+            }
+        }, 1000);
+
+        console.log("End");
+
+        // Event Loop Visual Example
+        console.log("1");
+
+        setTimeout(() => {
+            console.log("2 (Web API Timer)");
+        }, 0);
+
+        Promise.resolve().then(() => {
+            console.log("3 (Microtask)");
+        });
+
+        console.log("4");
+
+        // Expected Output:
+        // 1
+        // 4
+        // 3
+        // 2
+    </script>
+
+</body>
+</html>
