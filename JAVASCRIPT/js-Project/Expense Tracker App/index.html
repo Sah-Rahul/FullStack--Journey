@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker Split UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Left Side: Add Transaction -->
+      <div class="left-panel">
+        <h2>Add Transaction</h2>
+
+        <div class="add-transaction">
+          <input type="text" placeholder="Transaction Name" id="nameInput" />
+          <input type="number" placeholder="Amount" id="amountInput" />
+          <input type="date" id="dateInput" />
+
+          <!-- Type Selector -->
+          <div class="type-selector">
+            <button
+              class="type-btn active"
+              id="incomeBtn"
+              onclick="selectType('income')"
+            >
+              Income
+            </button>
+            <button
+              class="type-btn"
+              id="expenseBtn"
+              onclick="selectType('expense')"
+            >
+              Expense
+            </button>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="btn-group">
+            <button class="delete-btn" id="deleteBtn">Delete</button>
+            <button class="export-btn" id="exportBtn">Export</button>
+          </div>
+
+          <button id="addBtn">Add Transaction</button>
+        </div>
+      </div>
+
+      <!-- Right Side: Live Preview -->
+      <div class="right-panel">
+        <div class="balance-card">
+          <h2 id="balance">$0.00</h2>
+          <p id="summary">Income: +$0.00 | Expense: -$0.00</p>
+        </div>
+
+        <div class="transactions" id="transactionList">
+          <h3>Transactions</h3>
+          <span id="span">No Transaction Here's</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
