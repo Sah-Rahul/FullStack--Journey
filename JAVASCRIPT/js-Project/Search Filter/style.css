@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f8;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.controls {
+  max-width: 900px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.controls input[type="search"] {
+  flex: 1 1 300px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+.controls input[type="search"]:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+.categories button {
+  background: #eee;
+  border: 1.5px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  font-size: 14px;
+  color: #333;
+  user-select: none;
+}
+.categories button.active,
+.categories button:hover {
+  background-color: #4a90e2;
+  border-color: #357abd;
+  color: white;
+}
+
+.products {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.product-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.product-image {
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  align-self: center;
+}
+.product-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #222;
+  flex-grow: 1;
+}
+.product-price {
+  font-weight: 700;
+  font-size: 16px;
+  color: #4a90e2;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .controls {
+    flex-direction: column;
+  }
+  .controls input[type="search"] {
+    flex: unset;
+    width: 100%;
+  }
+}
