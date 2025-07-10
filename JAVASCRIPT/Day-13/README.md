@@ -1,4 +1,4 @@
-# JavaScript Day 14 – Spread, Rest, Optional Chaining & Ternary
+# JavaScript Day 13 – Spread, Rest, Optional Chaining & Ternary
 
 ## What I Learned:
 
