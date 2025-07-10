@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="signupForm" novalidate>
+      <h2>Sign Up</h2>
+
+      <div class="form-control">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+        />
+        <div class="error-message"></div>
+      </div>
+
+      <div class="form-control">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+        />
+        <div class="error-message"></div>
+      </div>
+
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Min 6 characters"
+        />
+        <div class="error-message"></div>
+      </div>
+
+      <div class="form-control">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          placeholder="Re-enter password"
+        />
+        <div class="error-message"></div>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
