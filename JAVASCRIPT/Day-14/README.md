@@ -1,4 +1,4 @@
-# 🚀 JavaScript Day 15 – Module System, Nullish Coalescing & Error Handling
+# 🚀 JavaScript Day 14 – Module System, Nullish Coalescing & Error Handling
 
 Today I explored how modern JavaScript supports large-scale apps using **Modules**, handles **safe fallbacks** with `??`, and catches failures using **Error Handling**.
 
