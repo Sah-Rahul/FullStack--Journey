@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+     
+    <ul id="todoList">
+      <li>✅ Complete JS</li>
+      <li>✅ Push to GitHub</li>
+      <li>✅ Write LinkedIn Post</li>
+    </ul>
+
+    <script>
+      const todoList = document.getElementById("todoList");
+
+      // ✅ Event Delegation in action
+      todoList.addEventListener("click", function (event) {
+        if (event.target.tagName === "LI") {
+          event.target.style.textDecoration = "line-through";
+          console.log("✅ Marked done:", event.target.textContent);
+        }
+      });
+
+      // Dynamically adding a new task
+      setTimeout(() => {
+        const newItem = document.createElement("li");
+        newItem.textContent = "✅ Added via JS";
+        todoList.appendChild(newItem);
+      }, 2000);
+    </script>
+  </body>
+</html>

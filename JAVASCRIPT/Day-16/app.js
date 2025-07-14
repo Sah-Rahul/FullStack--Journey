@@ -1,13 +1,12 @@
 try {
   let json = '{"name": "Rahul"}';
-  let user = JSON.parse(json);  // ✅ Valid JSON
+  let user = JSON.parse(json); //   Valid JSON
   console.log(user.name);
 } catch (error) {
   console.log("❌ JSON error:", error.message);
 } finally {
   console.log("✅ Done parsing JSON");
 }
-
 
 // throw – Manually Throw Errors
 
@@ -28,7 +27,7 @@ try {
 
 async function fetchData() {
   try {
-    const res = await fetch("https://api.invalidurl.com/data");
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
     if (!res.ok) throw new Error("Failed to fetch data");
     const data = await res.json();
     console.log(data);
