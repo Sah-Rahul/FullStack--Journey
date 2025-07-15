@@ -24,8 +24,8 @@ let finalCount = count ?? 100;  // ✅ 0 (not 100)
 console.log("Count:", finalCount);
 
 let name1 = "";
-let nameFallback = name1 || "Anonymous";      // ❌ "Anonymous" (wrong if "" is valid)
-let nameSafe = name1 ?? "Anonymous";          // ✅ "" (because it's not null/undefined)
+let nameFallback = name1 || "Anonymous";       
+let nameSafe = name1 ?? "Anonymous";          
 console.log("Safe Name:", nameSafe);
 
 
