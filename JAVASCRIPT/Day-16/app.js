@@ -20,7 +20,7 @@ function divide(a, b) {
 try {
   console.log(divide(10, 0));
 } catch (err) {
-  console.log("⚠️ Error caught:", err.message);
+  console.log("⚠️ Error  caught:", err.message);
 }
 
 // Real World Example – Handling API Error
