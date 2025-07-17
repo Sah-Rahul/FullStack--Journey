@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Form Builder (Drag & Drop)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="builder-container">
+      <!-- 🧰 Sidebar: Form Elements -->
+      <aside class="form-sidebar">
+        <h3>Form Elements</h3>
+        <div class="draggable-elements">
+          <div class="form-item" draggable="true">Text Input</div>
+          <div class="form-item" draggable="true">Email</div>
+          <div class="form-item" draggable="true">Password</div>
+          <div class="form-item" draggable="true">Textarea</div>
+          <div class="form-item" draggable="true">Select</div>
+          <div class="form-item" draggable="true">Checkbox</div>
+          <div class="form-item" draggable="true">Radio Button</div>
+          <div class="form-item" draggable="true">Submit Button</div>
+        </div>
+        <div class="form-controls">
+          <button id="reset-btn">Reset</button>
+          <button id="export-btn">Export HTML</button>
+        </div>
+      </aside>
+
+      <main class="form-canvas" id="form-canvas">
+        <p class="placeholder-text">Drag form elements here</p>
+      </main>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
