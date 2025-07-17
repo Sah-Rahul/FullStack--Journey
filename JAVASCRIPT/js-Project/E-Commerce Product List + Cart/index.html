@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🛒 E-Commerce Cart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🛍️ My Store</h1>
+    </header>
+
+    <main>
+      <!-- 🔹 Product List -->
+      <section id="product-list" class="product-list"></section>
+
+      <!-- 🔹 Cart -->
+      <aside class="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+          <p>Total: $<span id="total">0.00</span></p>
+          <button id="checkout-btn" disabled>Checkout</button>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

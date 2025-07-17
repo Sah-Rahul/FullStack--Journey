@@ -1,0 +1,259 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+header h1 {
+  color: #222;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* Main Layout */
+main {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Product List */
+.product-list {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  text-align: center;
+  color: #333;
+}
+
+.product-card p.price {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0a74da;
+  margin-bottom: 12px;
+}
+
+.product-card button {
+  padding: 10px 15px;
+  background-color: #0a74da;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #095bb5;
+}
+
+/* Cart Sidebar */
+.cart {
+  flex: 1;
+  background: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  min-width: 280px;
+}
+
+.cart h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #222;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.cart-items {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 360px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.cart-item-info h4 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.cart-item-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cart-item-qty button {
+  background-color: #0a74da;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.cart-item-qty button:hover {
+  background-color: #095bb5;
+}
+
+.cart-item-remove {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.cart-item-remove:hover {
+  color: #c0392b;
+}
+
+/* Cart footer */
+.cart-footer {
+  margin-top: 15px;
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-footer strong {
+  font-size: 1.2rem;
+  color: #222;
+}
+
+#checkout-btn {
+  background-color: #0a74da;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#checkout-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#checkout-btn:hover:not(:disabled) {
+  background-color: #095bb5;
+}
+
+/* Empty cart text */
+.empty-cart {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+
+  .cart {
+    max-width: 100%;
+    width: 100%;
+  }
+}
