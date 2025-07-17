@@ -27,7 +27,6 @@ ecommerce-cart/
 ├── index.html
 ├── style.css
 ├── app.js
-└── screenshot.png
 ```
 
 ---
