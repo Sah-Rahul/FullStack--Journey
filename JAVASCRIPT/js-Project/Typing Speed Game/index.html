@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Typing Speed Game</title>
+    <link rel="stylesheet" href="typing.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Typing Speed Game</h1>
+
+      <div id="quote-box">Loading quote...</div>
+
+      <textarea id="input-box" placeholder="Start typing here..."></textarea>
+
+      <div class="info">
+        <p>⏱️ Time: <span id="timer">0</span> sec</p>
+        <p>💨 WPM: <span id="wpm">0</span></p>
+        <p>🎯 Accuracy: <span id="accuracy">0%</span></p>
+        <p>
+          ✅ Correct: <span id="correctTyped">0</span> | 🔠 Typed:
+          <span id="totalTyped">0</span>
+        </p>
+      </div>
+
+      <button id="restart-btn">Restart</button>
+
+    
+
+      <!-- Typing Sound -->
+      <audio id="key-sound" src="./audio/audio.mp3"></audio>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
