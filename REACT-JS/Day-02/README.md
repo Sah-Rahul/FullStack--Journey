@@ -23,19 +23,9 @@ function Header() {
   return <h1>Welcome to My App</h1>;
 }
 ```
-
-## 🔹 2. Props (Short for Properties)
-
-Used to pass data from one component to another.
-
-```js
-function Welcome(props) {
-  return <h2>Hello, {props.name}!</h2>;
-}
-
 // Usage
 <Welcome name="Rahul" />;
-```
+
 
 ## 🚦 React Router DOM (v6+)
 
