@@ -1,4 +1,4 @@
-# ⚛️ React State & Icons Demo Project
+# ⚛️ React State & Icons
 
 This project demonstrates how to use **React State (`useState`)** to manage data inside components, and how to use **Icons** in a React app (using `react-icons` package).
 
