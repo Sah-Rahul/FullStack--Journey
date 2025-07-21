@@ -70,7 +70,7 @@ const styles = {
   },
   input: {
     padding: "8px",
-    fontSize: "16px"
+    fontSize: "16px" 
   },
   button: {
     background: "#007bff",
