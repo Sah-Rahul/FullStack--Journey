@@ -57,7 +57,6 @@ project/
       "title": "Product 1",
       "price": 99.99
     },
-    ...
   ]
 }
 ```
