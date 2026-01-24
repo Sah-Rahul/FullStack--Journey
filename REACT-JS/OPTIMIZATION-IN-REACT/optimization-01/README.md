@@ -1,8 +1,6 @@
 # ⚛️ React Optimization Basics
 
-This repository covers **core React optimization concepts** step by step, with clean examples and interview-ready explanations.
-
----
+ 
 
 ## 📌 Topics Covered (So Far)
 - React re-render problem
